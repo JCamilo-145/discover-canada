@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explora los destinos turísticos de Canadá."/>
+  <meta name="author" content="Juan Camilo Trujillo Candela"/>
+  <meta name="theme-color" content="#1A5276"/>
+  <title>Discover Canada | Destinos</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="../index.html" class="navbar__logo" aria-label="Discover Canada - Ir al inicio">
+        <span class="maple" aria-hidden="true">&#9670;</span> Discover Canada
+      </a>
+      <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <ul class="navbar__links" id="nav-links" role="list">
+        <li><a href="../index.html" data-i18n="nav-inicio">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="destinos.html" class="active" aria-current="page" aria-haspopup="true" aria-expanded="false" data-i18n="nav-destinos">Destinos</a>
+          <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem"><a href="#banff"     data-i18n="sub-rocosas">🏔️ Montañas Rocosas</a></li>
+            <li role="menuitem"><a href="#niagaras"  data-i18n="sub-niagaras">🌊 Cataratas del Niágara</a></li>
+            <li role="menuitem"><a href="#vancouver" data-i18n="sub-vancouver">🌲 Vancouver</a></li>
+            <li role="menuitem"><a href="#yukon"     data-i18n="sub-yukon">🌌 Yukon</a></li>
+          </ul>
+        </li>
+        <li><a href="planifica.html" data-i18n="nav-planifica">Planifica</a></li>
+        <li><a href="contacto.html"  data-i18n="nav-contacto">Contacto</a></li>
+      </ul>
+      <button class="lang-btn" id="lang-toggle" aria-label="Cambiar idioma a inglés">EN / ES</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="bienvenida" role="status" aria-live="polite"><p id="mensaje-bienvenida"></p></div>
+
+    <div class="page-header">
+      <span class="page-header__badge" data-i18n="ph-badge-destinos">Destinos</span>
+      <h1 class="page-header__title" data-i18n="ph-title-destinos">Explora los paisajes de Canadá</h1>
+      <p class="page-header__sub"    data-i18n="ph-sub-destinos">Selecciona una provincia o región para conocer más</p>
+    </div>
+
+    <!-- Filtros -->
+    <section aria-labelledby="filtros-title" style="background:var(--fondo-claro);padding:2rem;">
+      <h2 class="section-title" id="filtros-title" style="margin-bottom:1.5rem;" data-i18n="filtros-title">Filtrar por tipo de paisaje</h2>
+      <div class="filtros" role="group" aria-label="Filtros de destino">
+        <button class="filtro-btn active" aria-pressed="true"  data-filter="todos"   data-i18n="filtro-todos">Todos</button>
+        <button class="filtro-btn"        aria-pressed="false" data-filter="montana"  data-i18n="filtro-montana">Montaña</button>
+        <button class="filtro-btn"        aria-pressed="false" data-filter="costa"    data-i18n="filtro-costa">Costa</button>
+        <button class="filtro-btn"        aria-pressed="false" data-filter="bosque"   data-i18n="filtro-bosque">Bosque</button>
+        <button class="filtro-btn"        aria-pressed="false" data-filter="artico"   data-i18n="filtro-artico">Ártico</button>
+      </div>
+    </section>
+
+    <!-- Tabla -->
+    <section style="padding:3rem 2rem;background:var(--blanco);" aria-labelledby="tabla-title">
+      <h2 class="section-title" id="tabla-title" data-i18n="tabla-title">Destinos turísticos</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <div class="tabla-section">
+        <table class="tabla-destinos" aria-describedby="tabla-desc">
+          <caption id="tabla-desc">Principales destinos turísticos de Canadá</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="col-destino">Destino</th>
+              <th scope="col" data-i18n="col-provincia">Provincia</th>
+              <th scope="col" data-i18n="col-paisaje">Tipo de paisaje</th>
+              <th scope="col" data-i18n="col-temporada">Temporada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="banff"     data-tipo="montana"><td>Banff</td><td>Alberta</td><td>Montaña</td><td>Todo el año</td></tr>
+            <tr id="niagaras"  data-tipo="costa"><td>Tofino</td><td>British Columbia</td><td>Costa</td><td>Verano</td></tr>
+            <tr                data-tipo="artico"><td>Quebec City</td><td>Quebec</td><td>Ciudad / Nieve</td><td>Invierno</td></tr>
+            <tr id="yukon"     data-tipo="artico"><td>Yukon</td><td>Yukon</td><td>Ártico / Aurora</td><td>Invierno</td></tr>
+            <tr                data-tipo="montana"><td>Lago Louise</td><td>Alberta</td><td>Lago glaciar</td><td>Verano / Otoño</td></tr>
+            <tr id="vancouver" data-tipo="bosque costa"><td>Vancouver Island</td><td>British Columbia</td><td>Bosque / Costa</td><td>Primavera</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Galería con imágenes reales -->
+    <section class="destinos-section" aria-labelledby="galeria-title">
+      <h2 class="section-title" id="galeria-title" data-i18n="galeria-title">Galería de paisajes</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <div class="galeria-grid">
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80"
+               alt="Parque Nacional Banff, Alberta: montañas nevadas y lago turquesa"/>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&q=80"
+               alt="Cataratas del Niágara, Ontario: cascadas con gran caudal de agua"/>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=500&q=80"
+               alt="Vancouver, British Columbia: skyline con montañas nevadas"/>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=500&q=80"
+               alt="Aurora boreal verde en el Yukon: cielo nocturno ártico iluminado"/>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80"
+               alt="Lago Louise, Alberta: lago de color esmeralda rodeado de glaciares"/>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=500&q=80"
+               alt="Pradera de Saskatchewan: campos dorados bajo cielo de atardecer"/>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2026 Discover Canada &nbsp;|&nbsp;
+      <a href="#" data-i18n="footer-privacidad">Privacidad</a>
+      <a href="#" data-i18n="footer-terminos">Términos</a>
+      <a href="../index.html" data-i18n="footer-inicio">Inicio</a>
+    </p>
+    <p style="margin-top:8px;font-size:0.8rem;">Proyecto académico — Programación Web 213025 — UNAD</p>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

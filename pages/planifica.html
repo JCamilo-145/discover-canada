@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Planifica tu viaje a Canadá."/>
+  <meta name="author" content="Juan Camilo Trujillo Candela"/>
+  <meta name="theme-color" content="#1A5276"/>
+  <title>Discover Canada | Planifica tu viaje</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="../index.html" class="navbar__logo" aria-label="Discover Canada - Ir al inicio">
+        <span class="maple" aria-hidden="true">&#9670;</span> Discover Canada
+      </a>
+      <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <ul class="navbar__links" id="nav-links" role="list">
+        <li><a href="../index.html" data-i18n="nav-inicio">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="destinos.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav-destinos">Destinos</a>
+          <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem"><a href="destinos.html#banff"     data-i18n="sub-rocosas">🏔️ Montañas Rocosas</a></li>
+            <li role="menuitem"><a href="destinos.html#niagaras"  data-i18n="sub-niagaras">🌊 Cataratas del Niágara</a></li>
+            <li role="menuitem"><a href="destinos.html#vancouver" data-i18n="sub-vancouver">🌲 Vancouver</a></li>
+            <li role="menuitem"><a href="destinos.html#yukon"     data-i18n="sub-yukon">🌌 Yukon</a></li>
+          </ul>
+        </li>
+        <li><a href="planifica.html" class="active" aria-current="page" data-i18n="nav-planifica">Planifica</a></li>
+        <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
+      </ul>
+      <button class="lang-btn" id="lang-toggle" aria-label="Cambiar idioma a inglés">EN / ES</button>
+    </nav>
+  </header>
+  <main id="main-content">
+    <div class="bienvenida" role="status" aria-live="polite"><p id="mensaje-bienvenida"></p></div>
+    <div class="page-header">
+      <span class="page-header__badge" data-i18n="ph-badge-planifica">Planificador</span>
+      <h1 class="page-header__title"   data-i18n="ph-title-planifica">Organiza tu aventura canadiense</h1>
+      <p  class="page-header__sub"     data-i18n="ph-sub-planifica">Completa el formulario y recibe sugerencias personalizadas</p>
+    </div>
+    <section class="form-section" aria-labelledby="form-title">
+      <h2 class="section-title" id="form-title" data-i18n="form-title">Formulario de planificación</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <div id="form-success" class="form-success" role="alert" aria-live="polite" hidden>✅ ¡Formulario enviado! Pronto recibirás sugerencias.</div>
+      <form id="planifica-form" action="#" method="post" novalidate aria-label="Formulario de planificación">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="destino" data-i18n="label-destino">Destino preferido</label>
+            <select id="destino" name="destino" required aria-required="true">
+              <option value=""       data-i18n="opt-select-dest">Selecciona un destino</option>
+              <option value="banff"  data-i18n="opt-banff">Banff, Alberta</option>
+              <option value="tofino" data-i18n="opt-tofino">Tofino, British Columbia</option>
+              <option value="quebec" data-i18n="opt-quebec">Quebec City, Quebec</option>
+              <option value="yukon"  data-i18n="opt-yukon">Yukon</option>
+              <option value="lago"   data-i18n="opt-lago">Lago Louise, Alberta</option>
+              <option value="van"    data-i18n="opt-vancouver-d">Vancouver, British Columbia</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fecha" data-i18n="label-fecha">Fecha de viaje</label>
+            <input type="date" id="fecha" name="fecha" required aria-required="true" aria-describedby="fecha-hint"/>
+            <span id="fecha-hint" class="form-hint" data-i18n="hint-fecha">Selecciona la fecha de inicio del viaje</span>
+          </div>
+          <div class="form-group">
+            <label for="viajeros" data-i18n="label-viajeros">Número de viajeros</label>
+            <input type="number" id="viajeros" name="viajeros" min="1" max="20" placeholder="Ej: 2" required aria-required="true"/>
+          </div>
+          <div class="form-group">
+            <label for="actividad" data-i18n="label-actividad">Tipo de actividad</label>
+            <select id="actividad" name="actividad" required aria-required="true">
+              <option value=""          data-i18n="opt-select-act">Selecciona una actividad</option>
+              <option value="senderismo" data-i18n="opt-senderismo">Senderismo</option>
+              <option value="esqui"      data-i18n="opt-esqui">Esquí y nieve</option>
+              <option value="aurora"     data-i18n="opt-aurora">Ver aurora boreal</option>
+              <option value="playa"      data-i18n="opt-playa">Playas y costas</option>
+              <option value="cultura"    data-i18n="opt-cultura">Cultura y gastronomía</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary" data-i18n="btn-sugerencias">Obtener sugerencias</button>
+        </div>
+      </form>
+    </section>
+    <section class="consejos-section" aria-labelledby="consejos-title">
+      <h2 class="section-title" id="consejos-title" data-i18n="consejos-title">Consejos para viajeros</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <div class="cards-grid">
+        <article class="consejo-card">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=600&q=80" alt="Paisaje nevado de Canadá con nieve y árboles en invierno"/></div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="consejo1-title">Clima</h3>
+            <p data-i18n="consejo1-texto">Canadá tiene temperaturas extremas. En invierno pueden llegar a -30°C. Lleva ropa térmica. En verano oscilan entre 20°C y 35°C.</p>
+          </div>
+        </article>
+        <article class="consejo-card">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Documentos de viaje y pasaporte sobre una mesa"/></div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="consejo2-title">Visa y documentos</h3>
+            <p data-i18n="consejo2-texto">Los ciudadanos colombianos necesitan visa de turista. Tramítala con al menos 8 semanas de anticipación.</p>
+          </div>
+        </article>
+        <article class="consejo-card">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=600&q=80" alt="Tren de VIA Rail recorriendo el paisaje canadiense"/></div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="consejo3-title">Transporte</h3>
+            <p data-i18n="consejo3-texto">VIA Rail conecta las principales ciudades. Para los parques nacionales se recomienda alquilar un auto.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <p>© 2026 Discover Canada &nbsp;|&nbsp;
+      <a href="#" data-i18n="footer-privacidad">Privacidad</a>
+      <a href="#" data-i18n="footer-terminos">Términos</a>
+      <a href="../index.html" data-i18n="footer-inicio">Inicio</a>
+    </p>
+    <p style="margin-top:8px;font-size:0.8rem;">Proyecto académico — Programación Web 213025 — UNAD</p>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

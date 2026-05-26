@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contacta al equipo de Discover Canada."/>
+  <meta name="author" content="Juan Camilo Trujillo Candela"/>
+  <meta name="theme-color" content="#1A5276"/>
+  <title>Discover Canada | Contacto</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="../index.html" class="navbar__logo" aria-label="Discover Canada - Ir al inicio">
+        <span class="maple" aria-hidden="true">&#9670;</span> Discover Canada
+      </a>
+      <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <ul class="navbar__links" id="nav-links" role="list">
+        <li><a href="../index.html" data-i18n="nav-inicio">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="destinos.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav-destinos">Destinos</a>
+          <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem"><a href="destinos.html#banff"     data-i18n="sub-rocosas">🏔️ Montañas Rocosas</a></li>
+            <li role="menuitem"><a href="destinos.html#niagaras"  data-i18n="sub-niagaras">🌊 Cataratas del Niágara</a></li>
+            <li role="menuitem"><a href="destinos.html#vancouver" data-i18n="sub-vancouver">🌲 Vancouver</a></li>
+            <li role="menuitem"><a href="destinos.html#yukon"     data-i18n="sub-yukon">🌌 Yukon</a></li>
+          </ul>
+        </li>
+        <li><a href="planifica.html" data-i18n="nav-planifica">Planifica</a></li>
+        <li><a href="contacto.html" class="active" aria-current="page" data-i18n="nav-contacto">Contacto</a></li>
+      </ul>
+      <button class="lang-btn" id="lang-toggle" aria-label="Cambiar idioma a inglés">EN / ES</button>
+    </nav>
+  </header>
+  <main id="main-content">
+    <div class="bienvenida" role="status" aria-live="polite"><p id="mensaje-bienvenida"></p></div>
+    <div class="page-header">
+      <span class="page-header__badge" data-i18n="ph-badge-contacto">Contacto</span>
+      <h1 class="page-header__title"   data-i18n="ph-title-contacto">¿Tienes preguntas?</h1>
+      <p  class="page-header__sub"     data-i18n="ph-sub-contacto">Escríbenos y te responderemos en menos de 24 horas</p>
+    </div>
+    <section class="form-section" aria-labelledby="contacto-title">
+      <h2 class="section-title" id="contacto-title" data-i18n="contacto-title">Envíanos un mensaje</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <div id="form-success" class="form-success" role="alert" aria-live="polite" hidden>✅ ¡Mensaje enviado! Te responderemos pronto.</div>
+      <form id="contacto-form" action="#" method="post" novalidate aria-label="Formulario de contacto" style="max-width:600px;margin:0 auto;">
+        <div class="form-group" style="margin-bottom:1.2rem;">
+          <label for="nombre" data-i18n="label-nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" data-i18n="ph-nombre" placeholder="Tu nombre" required aria-required="true" autocomplete="name"/>
+        </div>
+        <div class="form-group" style="margin-bottom:1.2rem;">
+          <label for="email" data-i18n="label-email">Correo electrónico</label>
+          <input type="email" id="email" name="email" data-i18n="ph-email" placeholder="tu@correo.com" required aria-required="true" autocomplete="email"/>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="mensaje" data-i18n="label-mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" class="form-textarea" data-i18n="ph-mensaje" placeholder="Escribe tu mensaje aquí..." required aria-required="true"></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary" data-i18n="btn-enviar">Enviar mensaje</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <p>© 2026 Discover Canada &nbsp;|&nbsp;
+      <a href="#" data-i18n="footer-privacidad">Privacidad</a>
+      <a href="#" data-i18n="footer-terminos">Términos</a>
+      <a href="../index.html" data-i18n="footer-inicio">Inicio</a>
+    </p>
+    <p style="margin-top:8px;font-size:0.8rem;">Proyecto académico — Programación Web 213025 — UNAD</p>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

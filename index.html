@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Canada - Explora los paisajes naturales y la cultura de Canadá." />
+  <meta name="author" content="Juan Camilo Trujillo Candela" />
+  <meta name="theme-color" content="#1A5276" />
+  <title>Discover Canada | Inicio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <header role="banner">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="index.html" class="navbar__logo" aria-label="Discover Canada - Ir al inicio">
+        <span class="maple" aria-hidden="true">&#9670;</span>
+        Discover Canada
+      </a>
+      <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <ul class="navbar__links" id="nav-links" role="list">
+        <li><a href="index.html" class="active" aria-current="page" data-i18n="nav-inicio">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="pages/destinos.html" aria-haspopup="true" aria-expanded="false" data-i18n="nav-destinos">Destinos</a>
+          <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem"><a href="pages/destinos.html#banff"     data-i18n="sub-rocosas">🏔️ Montañas Rocosas</a></li>
+            <li role="menuitem"><a href="pages/destinos.html#niagaras"  data-i18n="sub-niagaras">🌊 Cataratas del Niágara</a></li>
+            <li role="menuitem"><a href="pages/destinos.html#vancouver" data-i18n="sub-vancouver">🌲 Vancouver</a></li>
+            <li role="menuitem"><a href="pages/destinos.html#yukon"     data-i18n="sub-yukon">🌌 Yukon</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/planifica.html" data-i18n="nav-planifica">Planifica</a></li>
+        <li><a href="pages/contacto.html"  data-i18n="nav-contacto">Contacto</a></li>
+      </ul>
+      <button class="lang-btn" id="lang-toggle" aria-label="Cambiar idioma a inglés">EN / ES</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <div class="bienvenida" role="status" aria-live="polite">
+      <p id="mensaje-bienvenida"></p>
+    </div>
+
+    <!-- SLIDER -->
+    <section class="slider-section" aria-labelledby="slider-label">
+      <h2 class="sr-only" id="slider-label">Galería de destinos</h2>
+      <div class="slider" role="region" aria-label="Slider de imágenes de Canadá">
+
+        <div class="slide active" aria-hidden="false">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1400&q=80"
+               alt="Lago Louise con aguas turquesa rodeado de montañas nevadas, Banff Alberta" />
+          <div class="slide__overlay"></div>
+          <div class="slide__content">
+            <h2 class="slide__title" data-i18n="slide1-title">Montañas Rocosas</h2>
+            <p  class="slide__sub"   data-i18n="slide1-sub">Alberta · Senderismo y nieve todo el año</p>
+            <a href="pages/destinos.html" class="btn-primary" data-i18n="slide1-btn">Ver destino</a>
+          </div>
+        </div>
+
+        <div class="slide" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=1400&q=80"
+               alt="Cataratas del Niágara con gran caudal de agua y niebla, Ontario" />
+          <div class="slide__overlay"></div>
+          <div class="slide__content">
+            <h2 class="slide__title" data-i18n="slide2-title">Cataratas del Niágara</h2>
+            <p  class="slide__sub"   data-i18n="slide2-sub">Ontario · La maravilla de las cascadas</p>
+            <a href="pages/destinos.html" class="btn-primary" data-i18n="slide2-btn">Ver destino</a>
+          </div>
+        </div>
+
+        <div class="slide" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1560813962-ff3d8fcf59ba?w=1400&q=80"
+               alt="Ciudad de Vancouver con rascacielos y montañas nevadas al fondo" />
+          <div class="slide__overlay"></div>
+          <div class="slide__content">
+            <h2 class="slide__title" data-i18n="slide3-title">Vancouver</h2>
+            <p  class="slide__sub"   data-i18n="slide3-sub">British Columbia · Bosques y costa del Pacífico</p>
+            <a href="pages/destinos.html" class="btn-primary" data-i18n="slide3-btn">Ver destino</a>
+          </div>
+        </div>
+
+        <div class="slide" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1400&q=80"
+               alt="Aurora boreal verde y violeta iluminando el cielo nocturno del Yukon" />
+          <div class="slide__overlay"></div>
+          <div class="slide__content">
+            <h2 class="slide__title" data-i18n="slide4-title">Yukon</h2>
+            <p  class="slide__sub"   data-i18n="slide4-sub">Yukon · Auroras boreales y vida salvaje</p>
+            <a href="pages/destinos.html" class="btn-primary" data-i18n="slide4-btn">Ver destino</a>
+          </div>
+        </div>
+
+        <button class="slider-btn slider-btn--prev" id="slider-prev" aria-label="Imagen anterior">&#10094;</button>
+        <button class="slider-btn slider-btn--next" id="slider-next" aria-label="Imagen siguiente">&#10095;</button>
+
+        <div class="slider-indicators" role="tablist" aria-label="Indicadores del slider">
+          <button class="slider-indicator active" role="tab" aria-label="Slide 1" aria-current="true"></button>
+          <button class="slider-indicator"        role="tab" aria-label="Slide 2" aria-current="false"></button>
+          <button class="slider-indicator"        role="tab" aria-label="Slide 3" aria-current="false"></button>
+          <button class="slider-indicator"        role="tab" aria-label="Slide 4" aria-current="false"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINOS DESTACADOS -->
+    <section class="destinos-section" aria-labelledby="destinos-title">
+      <h2 class="section-title" id="destinos-title" data-i18n="destinos-title">Destinos destacados</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <div class="cards-grid">
+
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80"
+                 alt="Montañas Rocosas de Alberta con picos nevados y cielos azules" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title"    data-i18n="card1-title">Montañas Rocosas</h3>
+            <p  class="card__subtitle" data-i18n="card1-sub">Alberta · Senderismo y nieve</p>
+            <span class="card__tag"    data-i18n="card1-tag">Todo el año</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80"
+                 alt="Cataratas del Niágara con poderosas cascadas y niebla de agua" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title"    data-i18n="card2-title">Cataratas del Niágara</h3>
+            <p  class="card__subtitle" data-i18n="card2-sub">Ontario · Cascadas icónicas</p>
+            <span class="card__tag"    data-i18n="card2-tag">Verano</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1609825488888-3a766db05542?w=600&q=80"
+                 alt="Skyline de Vancouver con bahía y montañas nevadas al fondo" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title"    data-i18n="card3-title">Vancouver</h3>
+            <p  class="card__subtitle" data-i18n="card3-sub">British Columbia · Bosques y costa</p>
+            <span class="card__tag"    data-i18n="card3-tag">Primavera</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MAPA -->
+    <section class="mapa-section" aria-labelledby="mapa-title">
+      <h2 class="section-title" id="mapa-title" data-i18n="mapa-title">Mapa de Canadá</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <div class="mapa-placeholder" role="img" aria-label="Mapa interactivo de Canadá próximamente">
+        <span aria-hidden="true">🗺️</span>
+        <p data-i18n="mapa-texto">Mapa interactivo de provincias — próximamente</p>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="info-section" aria-labelledby="info-title">
+      <h2 class="section-title" id="info-title" data-i18n="info-title">Información útil</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3 class="info-card__title" data-i18n="info1-title">Mejor época para visitar</h3>
+          <p data-i18n="info1-texto">Verano (junio–agosto) para senderismo y playas. Invierno (diciembre–marzo) para esquí y auroras boreales. Otoño para los colores del follaje.</p>
+        </div>
+        <div class="info-card">
+          <h3 class="info-card__title" data-i18n="info2-title">Datos rápidos del país</h3>
+          <p data-i18n="info2-texto">Capital: Ottawa. Idiomas oficiales: inglés y francés. Moneda: Dólar canadiense (CAD). Zona horaria: múltiples (UTC-3.5 a UTC-8).</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2026 Discover Canada &nbsp;|&nbsp;
+      <a href="#" data-i18n="footer-privacidad">Privacidad</a>
+      <a href="#" data-i18n="footer-terminos">Términos</a>
+      <a href="pages/contacto.html" data-i18n="footer-contacto">Contacto</a>
+    </p>
+    <p style="margin-top:8px;font-size:0.8rem;">Proyecto académico — Programación Web 213025 — UNAD</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
